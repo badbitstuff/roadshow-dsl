@@ -18,7 +18,7 @@ job("${gitusername}.${prefix}.build") {
       	jacocoCodeCoverage()
       	archiveJunit('build/test-results/*.xml')
       	warnings(['Java Compiler (javac)'])
-    	downstream("${GITHUB_USER}.roadshow.generated.staticanalysis", 'SUCCESS')
+    	downstream("${gitusername}.${prefix}.staticanalysis", 'SUCCESS')
     }
 }
 
