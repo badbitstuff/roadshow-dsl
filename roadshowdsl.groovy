@@ -3,7 +3,7 @@ repo = "git@github.com:${gitusername}/roadshow.git"
 prefix = "GEN"
 branch = "master"
 
-job("${gitusername}.${prefix}.build") {
+job("${gitusername}.roadshow.${prefix}.build") {
     scm {
         git(repo, branch)
     }
@@ -18,7 +18,7 @@ job("${gitusername}.${prefix}.build") {
       	jacocoCodeCoverage()
       	archiveJunit('build/test-results/*.xml')
       	warnings(['Java Compiler (javac)'])
-    	downstream("${gitusername}.${prefix}.staticanalysis", 'SUCCESS')
+    	downstream("${gitusername}.roadshow.${prefix}.staticanalysis", 'SUCCESS')
     }
 }
 
