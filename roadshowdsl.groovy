@@ -1,5 +1,5 @@
 gitusername = "badbitstuff"
-repo = "git@github.com:${username}/roadshow.git"
+repo = "git@github.com:${gitusername}/roadshow.git"
 prefix = "GEN"
 branch = "master"
 
